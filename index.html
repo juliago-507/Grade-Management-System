@@ -3,14 +3,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Kapitolyo High School - Student Portal </title>
+   <link rel="stylesheet" href="style.css"> 
 </head>
-<link rel="stylesheet" href="style.css">
-<script src="main.js"></script>
+<!--para sa  screen 1-->
 <body>
-<header>
+     <div class="phone-container"></div>
+     <img src="f1011437-c073-45f6-8cef-d9bf63830a60" alt="Kapitolyo High School Logo">
     <h1>Kapitolyo High School</h1>
     <p>Grade Management System</p>
-</header>
+    <button class="btn-get-started" onclick="showScreen('screen-login')">Get Started</button>
+    <!--para sa log in--->  
+   <div class="screen" id="screen-login">
+     <img src="f1011437-c073-45f6-8cef-d9bf63830a60" alt="Kapitolyo High School Logo" class="logo">
+    <h2>Login</h2>
+    <form onsubmit="return false">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required><br><br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br><br>
+        <button type="submit">Login</button>
+        <label>
+      <input type="checkbox" checked="checked" name="remember"> Remember me
+    </label>
+     <div class="container" style="background-color:#f1f1f1">
+    <button type="button" class="cancelbtn">Cancel</button><br><br>
+    <span class="psw">Forgot <a href="#">password?</a></span>
+     <button onclick="showScreen('screen-home')">Back</button>
+  </div>
+    </form>
+<!--para sa screen 2--->
+
 <nav>
     <button onclick="topnav()">Home</button>
     <button onclick="showGrades()">Grades</button>
@@ -18,51 +40,8 @@
     <button onclick="showProfile()">Profile</button>   
 </nav>
 
- <!--pang role picker-->
-  <section id="rolePage">
-    <h2>Select User</h2>
-    <p class="sub">Choose Who you are, then go to the login</p>
-    <ul class="roles">
-        <li id="role_admin" onclick="pickRole('admin')">
-            <span class="pic" style="background: #a1a19d;">A</span>
-            <span><span class="rname">Admin</span></span>
-            <span class="rinfo">Manage users,classes and Settings</span>
-            <span class="tick">&#10003;</span><!--check-->
-        </li>
-        <li id="role_eacher" onclick="pickRole('teacher')">
-             <span class="pic" style="background: #a1a19d;">T</span>
-            <span><span class="rname">Teacher</span></span>
-            <span class="rinfo">Enter and compute grades</span>
-            <span class="tick">&#10003;</span><!--check-->
-        </li>
-        <li id="role_student" onclick="pickRole('student')">
-             <span class="pic" style="background: #a1a19d;">S</span>
-            <span><span class="rname">Student</span></span>
-            <span class="rinfo">View grades</span>
-            <span class="tick">&#10003;</span><!--check-->
-       </li>     
-    </ul>
+
 </body>
- <!--para sa login-->
-    <section id="loginPage">
-    <h2>Kapitolyo High School</h2>
-    <form onsubmit="return false">
-         <div class="container">
-    <label for="uname"><b>Username</b></label>
-    <input type="text" placeholder="Enter Username" name="uname" required><br><br>
 
-    <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="psw" required><br><br>
-
-    <button type="submit">Login</button><br><br>
-    <label>
-      <input type="checkbox" checked="checked" name="remember"> Remember me
-    </label>
-  </div>
-
-  <div class="container" style="background-color:#f1f1f1">
-    <button type="button" class="cancelbtn">Cancel</button><br><br>
-    <span class="psw">Forgot <a href="#">password?</a></span>
-  </div>
 </form>  
 </html>
