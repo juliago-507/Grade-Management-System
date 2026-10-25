@@ -72,11 +72,7 @@ a {
 a:hover {
     text-decoration: underline;
 }
-
-/* =======================
-   LOGO
-========================== */
-
+ /*LOGO*/
 .logo-wrap {
     width: 110px;
     height: 110px;
@@ -117,11 +113,7 @@ a:hover {
 img {
     max-width: 100%;
 }
-
-/* ============================
-   LANDING PAGE
-========================================= */
-
+   /*LANDING PAGE*/
 .gradient-bg {
     position: absolute;
     inset: 0;
@@ -133,7 +125,6 @@ img {
     );
     z-index: -1;
 }
-
 #screen-home {
     min-height: 100vh;
     position: relative;
@@ -145,18 +136,15 @@ img {
     padding: 30px;
     color: var(--white);
 }
-
 #screen-home h1 {
     color: var(--white);
     font-size: 42px;
     margin-bottom: 10px;
 }
-
 #screen-home p {
     font-size: 21px;
     color: var(--white);
 }
-
 .btn-get-started {
     background: var(--gold);
     color: var(--white);
@@ -172,7 +160,6 @@ img {
     background: var(--brown-dark);
     transform: translateY(-3px);
 }
-
 .tagline {
     font-size: 24px;
     font-weight: bold;
@@ -180,7 +167,6 @@ img {
     margin-top: 40px;
     color: var(--gold);
 }
-
   /* ROLE PICKER*/
 .picker {
     min-height: 100vh;
@@ -188,17 +174,14 @@ img {
     background: var(--background);
     text-align: center;
 }
-
 .picker h1 {
     font-size: 36px;
     margin-top: 15px;
 }
-
 .picker p {
     color: var(--brown);
     font-size: 17px;
 }
-
 .roles {
     display: flex;
     justify-content: center;
@@ -206,7 +189,6 @@ img {
     gap: 25px;
     margin-top: 40px;
 }
-
 .role-card {
     width: 260px;
     min-height: 230px;
@@ -221,23 +203,19 @@ img {
     align-items: center;
     gap: 12px;
 }
-
 .role-card:hover {
     border-color: var(--gold);
     transform: translateY(-5px);
     box-shadow: 0 8px 20px rgba(62, 39, 35, 0.15);
 }
-
 .role-card b {
     font-size: 22px;
     color: var(--brown-dark);
 }
-
 .role-card small {
     color: var(--brown-light);
     font-size: 13px;
 }
-
 .badge {
     background: var(--brown);
     color: var(--white);
@@ -250,7 +228,6 @@ img {
     font-size: 24px;
     font-weight: bold;
 }
-
 .tag,
 .role-tag {
     background: var(--gold);
@@ -260,11 +237,7 @@ img {
     font-size: 12px;
     font-weight: bold;
 }
-
-/* ============================
-   LOGIN PAGE
-========================================= */
-
+   /*LOGIN PAGE*/
 #student-login,
 #web-login {
     min-height: 100vh;
@@ -933,11 +906,7 @@ tr:hover td {
 #gbTable td {
     vertical-align: middle;
 }
-
-/* =========================================
-   TEACHER SETTINGS
-========================================= */
-
+   /*TEACHER SETTINGS*/
 #p-teacher-settings .panel {
     max-width: 900px;
 }
@@ -945,11 +914,7 @@ tr:hover td {
 #p-teacher-settings .row {
     align-items: end;
 }
-
-/* =========================================
-   ADMIN DASHBOARD
-========================================= */
-
+   /*ADMIN DASHBOARD*/
 #p-admin-home {
     padding: 10px;
 }
@@ -976,11 +941,7 @@ tr:hover td {
 .stats li:hover {
     transform: translateY(-3px);
 }
-
-/* =========================================
-   ADMIN USER MANAGEMENT
-========================================= */
-
+  /* ADMIN USER MANAGEMENT*/
 #p-users .panel {
     background: var(--white);
 }
@@ -996,11 +957,7 @@ tr:hover td {
 #userTable td:last-child {
     white-space: nowrap;
 }
-
-/* =========================================
-   ADMIN CLASS MANAGEMENT
-========================================= */
-
+  /* ADMIN CLASS MANAGEMENT*/
 #p-manage-classes .panel {
     border-left: 5px solid var(--gold);
 }
@@ -2189,18 +2146,13 @@ function searchChanged() {
   if (role == "teacher") { showGradebook(); showMyClasses(); }
   if (role == "admin") { showUsers(); showGradebook(); }
 }
-
-
-// =====================
-// STUDENT SCREENS
-// ======================
+// STUDENT SCREEN
 function showStudent() {
   // the classes of the student's section
   var myClasses = [];
   for (var i = 0; i < db.classes.length; i++) {
     if (db.classes[i].section == user.section) { myClasses.push(db.classes[i]); }
   }
-
   // overall average = average of the final grades
   var finals = [];
   for (var j = 0; j < myClasses.length; j++) {
@@ -2922,11 +2874,7 @@ function applyJson() {
   showAdmin();
   showMessage("jsonMessage", "JSON applied.", true);
 }
-
-
-// ======================================================
 // START: load the data and show the role picker
-// ======================================================
 loadData();
 document.getElementById("doorLogo").src = document.querySelector("img.logo").src;
 show("screen-home");
